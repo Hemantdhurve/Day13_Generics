@@ -9,9 +9,8 @@ namespace Generic
             Console.WriteLine("Welcome to Generics Program");
 
             bool check = true;
-            FindMax obj = new FindMax();
 
-
+           
             while (check)
             {
                 Console.Write("Select Option:\n" +
@@ -26,7 +25,9 @@ namespace Generic
 
 
                     case 1:
-                        int result = obj.FindMaxInteger(23, 50, 5);
+
+                        FindMax<int> obj = new FindMax<int>(23, 50, 5);
+                        int result = obj.MaxFind(23, 50, 5);
 
                         Console.WriteLine(result);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
@@ -35,7 +36,9 @@ namespace Generic
                         break;
 
                     case 2:
-                        float result1 = obj.FindMaxFloat(11.5f, 100.5f, 3.5f);
+                        
+                        FindMax<float> obj1 = new FindMax<float>(11.5f, 100.5f, 3.5f);
+                        float result1 = obj1.MaxFind(11.5f, 100.5f, 3.5f);
 
                         Console.WriteLine(result1);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
@@ -44,7 +47,11 @@ namespace Generic
                         break;
 
                     case 3:
-                        string result2 = obj.FindMaxString("a","b","c");     //we get output on the basis of ASCII Vlue
+                       
+                        //we get output on the basis of ASCII Vlue
+                        FindMax<string> obj2 = new FindMax<string>("a", "b", "c");
+                        string result2 = obj2.MaxFind("a", "b", "c");
+
 
                         Console.WriteLine(result2);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
