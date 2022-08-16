@@ -15,7 +15,10 @@ namespace Generic
             while (check)
             {
                 Console.Write("Select Option:\n" +
-                   "1)Find Integer Maximum Number\n");
+                   "1)Find Integer Maximum Number\n" +
+                   "2)Find Float Maximum Number\n");
+
+
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -27,6 +30,15 @@ namespace Generic
                         Console.WriteLine(result);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         Console.WriteLine("Greatest number among three numbers is :" + result);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 2:
+                        float result1 = obj.FindMaxInteger(11.5f, 100.5f, 3.5f);
+
+                        Console.WriteLine(result1);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Greatest Float number among three numbers is :" + result1);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         break;
                     default:
