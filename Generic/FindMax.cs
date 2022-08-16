@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    public class FindMax<T>
+    public class FindMax<T> where T : IComparable
     {
         //declaring variables of generic type
         public T first,second,third;
 
+        //parameterize constructor of class
         public FindMax(T first, T second, T third)
         {
             this.first = first;
@@ -20,7 +21,8 @@ namespace Generic
 
         //using Generics Method to Refactor
         //Using placeholder T in generic Method we can reuse our code 
-        public T MaxFind<T>(T first, T second, T third) where T:IComparable
+
+        public T MaxFind()
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
