@@ -16,7 +16,8 @@ namespace Generic
             {
                 Console.Write("Select Option:\n" +
                    "1)Find Integer Maximum Number\n" +
-                   "2)Find Float Maximum Number\n");
+                   "2)Find Float Maximum Number\n" +
+                   "3)FInd Maximum String \n");
 
 
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -34,11 +35,20 @@ namespace Generic
                         break;
 
                     case 2:
-                        float result1 = obj.FindMaxInteger(11.5f, 100.5f, 3.5f);
+                        float result1 = obj.FindMaxFloat(11.5f, 100.5f, 3.5f);
 
                         Console.WriteLine(result1);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         Console.WriteLine("Greatest Float number among three numbers is :" + result1);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        break;
+
+                    case 3:
+                        string result2 = obj.FindMaxString("a","b","c");     //we get output on the basis of ASCII Vlue
+
+                        Console.WriteLine(result2);
+                        Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
+                        Console.WriteLine("Greatest String among three numbers is :" + result2);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         break;
                     default:

@@ -25,7 +25,7 @@ namespace Generic
             }
             return 0;
         }
-        public float FindMaxInteger(float first, float second, float third)
+        public float FindMaxFloat(float first, float second, float third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
@@ -40,6 +40,22 @@ namespace Generic
                 return third;
             }
             return 0;
+        }
+        public string FindMaxString(string first, string second, string third)
+        {
+            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
+            {
+                return first;
+            }
+            if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
+            {
+                return second;
+            }
+            if (third.CompareTo(first) > 0 && third.CompareTo(second) > 0)
+            {
+                return third;
+            }
+            return null;
         }
     }
 }
