@@ -26,7 +26,7 @@ namespace Generic
 
                     case 1:
 
-                        FindMax<int> obj = new FindMax<int>(23, 50, 5);
+                        FindMax<int> obj = new FindMax<int>(23, 50, 5,84);
                         int result = obj.MaxFind();
 
                         Console.WriteLine(result);
@@ -37,7 +37,7 @@ namespace Generic
 
                     case 2:
                         
-                        FindMax<float> obj1 = new FindMax<float>(11.5f, 100.5f, 3.5f);
+                        FindMax<float> obj1 = new FindMax<float>(11.5f, 100.5f, 3.5f,55.2f);
                         float result1 = obj1.MaxFind();
 
                         Console.WriteLine(result1);
@@ -48,8 +48,8 @@ namespace Generic
 
                     case 3:
                        
-                        //we get output on the basis of ASCII Vlue
-                        FindMax<string> obj2 = new FindMax<string>("a", "b", "c");
+                        //we get output on the basis of ASCII Value
+                        FindMax<string> obj2 = new FindMax<string>("Apple", "Peach", "Banana","Orange");
                         string result2 = obj2.MaxFind();
 
 
@@ -58,9 +58,11 @@ namespace Generic
                         Console.WriteLine("Greatest String among three numbers is :" + result2);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         break;
+
                     default:
                         check = !check;
                         break;
+
                 }
             }
 
