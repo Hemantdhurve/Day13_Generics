@@ -16,7 +16,8 @@ namespace Generic
                 Console.Write("Select Option:\n" +
                    "1)Find Integer Maximum Number\n" +
                    "2)Find Float Maximum Number\n" +
-                   "3)FInd Maximum String \n");
+                   "3)Find Maximum String \n" +
+                   "4)Find Print and Maximum using Generic Method\n");
 
 
                 int option = Convert.ToInt32(Console.ReadLine());
@@ -58,6 +59,23 @@ namespace Generic
                         Console.WriteLine("Greatest String among three numbers is :" + result2);
                         Console.WriteLine(":::::::::::::::::::::::::::::::::::::::::::::::::::");
                         break;
+
+                    case 4:
+                        //using array to store and to print Using print Method
+                        int[] intArray = { 23, 50, 5, 84, 57, 89 };
+                        GenericMax<int> printInt = new GenericMax<int>(intArray);
+                        printInt.PrintMax();
+                        
+
+                        float[] floatArray = { 11.5f, 100.5f, 3.5f, 55.2f, 2.5f };
+                        GenericMax<float> printFloat = new GenericMax<float>(floatArray);
+                        printFloat.PrintMax();
+
+                        string[] stringArray = { "Apple", "Peach", "banana", "Orange", "Mango" };
+                        GenericMax<string> printString = new GenericMax<string>(stringArray);
+                        printString.PrintMax();
+                        break;
+
 
                     default:
                         check = !check;
